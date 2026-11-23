@@ -10,6 +10,7 @@
 ## Используемые технологии
 
 - Python
+- Jupyter Notebook — пошаговое выполнение и документирование анализа
 - Pandas — обработка и анализ табличных данных
 - NumPy — работа с числовыми данными и условиями
 
@@ -19,6 +20,7 @@
 project/
 │
 ├── main.py
+├── factory_analysis.ipynb
 │
 ├── shift_morning_raw.csv
 ├── shift_day_raw.csv
@@ -96,6 +98,10 @@ project/
 
 ## Запуск проекта
 
+Проект можно запустить двумя способами: как Python-скрипт (`main.py`) или пошагово в Jupyter Notebook (`factory_analysis.ipynb`).
+
+### Вариант 1. Запуск Python-скрипта
+
 1. Установить Python.
 2. Установить необходимые библиотеки:
 
@@ -111,4 +117,21 @@ python main.py
 ```
 
 После выполнения скрипта в директории должны сформироваться три выходных файла: `factory.csv`, `suspicious_rows.csv` и `data_quality_report.csv`.
+
+### Вариант 2. Запуск Jupyter Notebook
+
+1. Установить Python и необходимые библиотеки:
+
+```bash
+pip install pandas numpy notebook
+```
+
+2. Разместить `factory_analysis.ipynb` и три исходных CSV-файла в одной директории.
+3. Запустить Jupyter:
+
+```bash
+jupyter notebook
+```
+
+4. Открыть `factory_analysis.ipynb` и выполнить ячейки сверху вниз. Ноутбук повторяет этапы обработки из `main.py` и сопровождает их текстовыми заголовками. Выходные CSV-файлы формируются после выполнения соответствующих ячеек.
 
